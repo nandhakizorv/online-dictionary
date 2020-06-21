@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Online Dictionary</title>
+  <head>
+    <link href="../static/style1.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">"
+  </head>
+  <style>
+  div#footer{
+    position: absolute;
+    font: 24px Arial, sans-serif;
+    bottom: 10px;
+    width: 50%;
+    border: 3px solid black;
+  }
+  </style>
+    <body>
+      <div class="container">
+        <h1>Online dictionary</h1>
+        <h3>Please fill the entires to get the definition of the required word</h3>
+        <div class="email">The definitions will be sent to your mail </div>
+        <div class="message">
+          {{text | safe}}
+        </div>
+        <form action="{{url_for('success')}}" method="POST">
+          <input title="Your email will be safe with us" placeholder="Enter your email address" type="email" name="email_name" required> <br>
+          <input title="Your data will be safe with us" placeholder="Enter your age" type="number" min="13", max="60" name="age_name" required> <br>
+          <input title="your word please" placeholder="Enter the word you want to search" type="text" name="word_name" required><br>
+          <button type="submit"> Submit </button>
+        </form>
+      </div>
+      <div id="footer" text>
+          <a>connect us on:</a>
+          <a href="https://www.facebook.com/nandhakizor.v" class="fa fa-facebook-official w3-hover-opacity"></a>
+          <a href="https://www.linkedin.com/in/nandha-kizor-v-854a9718b/" class="fa fa-linkedin w3-hover-opacity"></a>
+          <a href="https://twitter.com/therealnk26" class="fa fa-twitter w3-hover-opacity"></a>
+      </div>
+    </body>
+</html>
